@@ -238,7 +238,7 @@ FROM
     LEFT JOIN
     products ON order_items.product_id = products.product_id
     
-    WHERE product_weight_g>=2500 AND product_height_cm>=90 
+    WHERE product_weight_g>=2500 OR product_height_cm>=90 
 GROUP BY delivery_status;
 
 -- Delivery time somehow depends on product height and weight..
